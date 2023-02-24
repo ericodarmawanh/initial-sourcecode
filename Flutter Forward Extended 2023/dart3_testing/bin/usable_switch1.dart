@@ -16,9 +16,7 @@ void main(List<String> args) {
       }
       break;
     case 1:
-      break;
     case 3:
-      break;
     case 5:
       print('bagus');
       break;
