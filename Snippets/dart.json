@@ -99,7 +99,7 @@
         ]
     },
     "Consumer Page": {
-        "prefix": "scp",
+        "prefix": "csp",
         "body": [
             "class ${1:pageName} extends ConsumerWidget {",
             "\tconst ${1:pageName}({Key? key}) : super(key: key);",
@@ -115,7 +115,7 @@
         ]
     },
     "Consumer Statefull Page": {
-        "prefix": "scfp",
+        "prefix": "csfp",
         "body": [
             "class ${1:pageName} extends ConsumerStatefulWidget {",
             "\tconst ${1:pageName}({Key? key}) : super(key: key);",
