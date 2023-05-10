@@ -1,0 +1,74 @@
+{
+    "My App": {
+        "prefix": "mapp",
+        "body": [
+            "class MyApp extends StatelessWidget {",
+            "\tconst MyApp({Key? key}) : super(key: key);",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn MaterialApp(",
+            "\t\t\tdebugShowCheckedModeBanner: false,",
+            "\t\t\thome: $0,",
+            "\t\t);",
+            "\t}",
+            "}"
+        ]
+    },
+    "Stateless Page": {
+        "prefix": "stlp",
+        "body": [
+            // "import 'package:flutter/material.dart';",
+            // "",
+            "class ${1:pageName} extends StatelessWidget {",
+            "\tconst ${1:pageName}({Key? key}) : super(key: key);",
+            "",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn Scaffold(",
+            "\t\t\tappBar: AppBar(title: const Text('${2:title}'),),",
+            "\t\t\tbody: $0,",
+            "\t\t);",
+            "\t}",
+            "}"
+        ]
+    },
+    "Statefull Page": {
+        "prefix": "stfp",
+        "body": [
+            // "import 'package:flutter/material.dart';",
+            // "",
+            "class ${1:pageName} extends StatefulWidget {",
+            "\tconst ${1:pageName}({Key? key}) : super(key: key);",
+            "",
+            "\t@override",
+            "\tState<${1:pageName}> createState() => _${1:pageName}State();",
+            "}",
+            "\n",
+            "class _${1:pageName}State extends State<${1:pageName}> {",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn Scaffold(",
+            "\t\t\tappBar: AppBar(title: const Text('${2:title}'),),",
+            "\t\t\tbody: $0,",
+            "\t\t);",
+            "\t}",
+            "}"
+        ]
+    },
+    "Freezed Class": {
+        "prefix": "frc",
+        "body": [
+            "import 'package:freezed_annotation/freezed_annotation.dart';",
+            "",
+            "part '${1:fileName}.freezed.dart';",
+            "part '${1:fileName}.g.dart';",
+            "",
+            "@freezed",
+            "class ${2:className} with _$${2:className} {",
+            "\tconst factory ${2:className}(${0:parameters}) = _${2:className};",
+            "",
+            "\tfactory ${2:className}.fromJson(Map<String, dynamic> json) => _$${2:className}FromJson(json);",
+            "}"
+        ]
+    }
+}
