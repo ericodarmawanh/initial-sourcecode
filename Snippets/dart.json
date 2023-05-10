@@ -17,8 +17,6 @@
     "Stateless Page": {
         "prefix": "stlp",
         "body": [
-            // "import 'package:flutter/material.dart';",
-            // "",
             "class ${1:pageName} extends StatelessWidget {",
             "\tconst ${1:pageName}({Key? key}) : super(key: key);",
             "",
@@ -35,8 +33,6 @@
     "Statefull Page": {
         "prefix": "stfp",
         "body": [
-            // "import 'package:flutter/material.dart';",
-            // "",
             "class ${1:pageName} extends StatefulWidget {",
             "\tconst ${1:pageName}({Key? key}) : super(key: key);",
             "",
@@ -68,6 +64,74 @@
             "\tconst factory ${2:className}(${0:parameters}) = _${2:className};",
             "",
             "\tfactory ${2:className}.fromJson(Map<String, dynamic> json) => _$${2:className}FromJson(json);",
+            "}"
+        ]
+    },
+    "Consumer Widget": {
+        "prefix": "csw",
+        "body": [
+            "class ${1:widgetName} extends ConsumerWidget {",
+            "\tconst ${1:widgetName}({super.key});",
+            "",
+            "\t@override",
+            "\tWidget build(BuildContext context, WidgetRef ref) {",
+            "\t\treturn $0;",
+            "\t}",
+            "}"
+        ]
+    },
+    "Consumer Stateful Widget": {
+        "prefix": "csfw",
+        "body": [
+            "class ${1:widgetName} extends ConsumerStatefulWidget {",
+            "\tconst ${1:widgetName}({super.key});",
+            "",
+            "\t@override",
+            "\tConsumerState<${1:widgetName}> createState() => _${1:widgetName}State();",
+            "}",
+            "",
+            "class _${1:widgetName}State extends ConsumerState<${1:widgetName}> {",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn $0;",
+            "\t}",
+            "}"
+        ]
+    },
+    "Consumer Page": {
+        "prefix": "scp",
+        "body": [
+            "class ${1:pageName} extends ConsumerWidget {",
+            "\tconst ${1:pageName}({Key? key}) : super(key: key);",
+            "",
+            "\t@override",
+            "\tWidget build(BuildContext context, WidgetRef ref) {",
+            "\t\treturn Scaffold(",
+            "\t\t\tappBar: AppBar(title: const Text('${2:title}'),),",
+            "\t\t\tbody: $0,",
+            "\t\t);",
+            "\t}",
+            "}"
+        ]
+    },
+    "Consumer Statefull Page": {
+        "prefix": "scfp",
+        "body": [
+            "class ${1:pageName} extends ConsumerStatefulWidget {",
+            "\tconst ${1:pageName}({Key? key}) : super(key: key);",
+            "",
+            "\t@override",
+            "\tConsumerState<${1:pageName}> createState() => _${1:pageName}State();",
+            "}",
+            "\n",
+            "class _${1:pageName}State extends ConsumerState<${1:pageName}> {",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn Scaffold(",
+            "\t\t\tappBar: AppBar(title: const Text('${2:title}'),),",
+            "\t\t\tbody: $0,",
+            "\t\t);",
+            "\t}",
             "}"
         ]
     }
