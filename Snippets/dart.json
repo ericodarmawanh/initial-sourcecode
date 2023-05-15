@@ -134,5 +134,11 @@
             "\t}",
             "}"
         ]
+    },
+    "Create part statement (*.g.dart)": {
+        "prefix": "prt",
+        "body": [
+            "part '${TM_FILENAME_BASE}.g.dart';"
+        ]
     }
 }
